@@ -1,0 +1,6 @@
+@LegacyContributionAPI_HostAddress = http://localhost:5191
+
+GET {{LegacyContributionAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

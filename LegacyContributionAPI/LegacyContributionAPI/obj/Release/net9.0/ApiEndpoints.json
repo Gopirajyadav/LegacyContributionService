@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "LegacyContributionAPI.Controllers.ContributionsController",
+    "Method": "Process",
+    "RelativePath": "api/Contributions",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "LegacyContributionAPI.DTO.ContributionRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

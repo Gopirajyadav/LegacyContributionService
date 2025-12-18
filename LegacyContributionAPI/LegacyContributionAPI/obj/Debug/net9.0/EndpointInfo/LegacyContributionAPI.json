@@ -1,0 +1,66 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "LegacyContributionAPI",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Contributions": {
+      "post": {
+        "tags": [
+          "Contributions"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContributionRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContributionRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContributionRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ContributionRequestDto": {
+        "type": "object",
+        "properties": {
+          "policyNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiumAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "contributionDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "transactionRef": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
